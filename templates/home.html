@@ -1,0 +1,32 @@
+{% extends "base.html"%}{%block title%}Home{%endblock%}
+
+{% block content %}
+<div class="container-fluid cover-bg">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+    <header class="mb-auto">
+      <nav class="navbar navbar-expand-lg nav-decoration sticky-top m-50-bt">
+        <div class="container">
+          <a class="navbar-brand royal-blue" href="#">Guide for U
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse nav-masthead justify-content-center">
+            <a class="nav-link fw-bold py-1 px-0" href="/login">Login</a>
+            <a class="nav-link fw-bold py-1 px-0" href="/register">Register</a>
+          </nav>
+        </div>
+      </nav>
+    </header>
+
+    <div class="px-3 d-flex justify-content-center align-items-center flex-column" style="height: 100vh;">
+      <h1>Header</h1>
+      <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, accusantium corporis exercitationem nesciunt, aperiam asperiores, neque autem aliquid beatae cupiditate recusandae iure minima nobis libero pariatur laborum eos eum impedit.</p>
+      <p class="lead">
+        <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Start Now</a>
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

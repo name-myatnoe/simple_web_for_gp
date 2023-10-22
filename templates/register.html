@@ -1,0 +1,143 @@
+{% extends "base.html"%}{%block title%}Register{%endblock%}
+
+{% block content %}
+    <div class="container " id="login">
+        <div class=" w-100 mx-auto my-5">
+            <div class="row ">
+                <div class="d-flex justify-content-center align-items-center min-vh-100">
+                    <div class="col-xl-10 col-10">
+                        <!-- //form register -->
+                        <form class="px-4 py-3 rounded-3 form-decoration" id="formLogin" action="/register" method="post" novalidate>
+
+                            <h3 class=" h6 mb-3">Welcome from <small class="text-bg-white p-2">Guided for U</small></h3>
+
+                            <h1 class="h3 mb-3 fw-normal text-center">Please sign in this form!</h1>
+
+                            <!--radio form check-->
+                            <div class="d-flex justify-content-center">
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="userType" id="inlineRadio1" value="student" required>
+                                  <label class="form-check-label" for="student" class="required">Student</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="userType" id="inlineRadio2" value="teacher" required>
+                                  <label class="form-check-label" for="teacher" class="required">Teacher</label>
+                                </div>
+                              </div>
+
+                              <!--User Input-->
+                            <div class="form-floating mb-3">
+                                <input id="username" type="text" class="form-control" id="floatingUsername" name="username" placeholder="Full Name" required>
+                                    <label for="floatingUsername" class="required">Full Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input id="email" type="email" class="form-control" id="floatingEmail" name="email" placeholder="name@example.com" required>
+                                <label for="floatingEmail" class="required">Email address</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <input id="password" type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password" name="password" required>
+                                <label for="floatingPassword" class="required">Password</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input id="confirmedPassword" type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Confirmed Password" name="cpassword" required>
+                                <label for="floatingPassword" class="required">Comfirmed Password</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="floatingGender">Gender</label><br>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="gender" id="Male" value="male" >
+                                  <label class="form-check-label" for="inlineRadio1">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="gender" id="Female" value="female">
+                                  <label class="form-check-label" for="inlineRadio2">Female</label>
+                                </div>
+                              </div>
+                            <div class="form-floating mb-3">
+                                <input id="age" type="text" class="form-control" id="floatingAge" name="age" placeholder="30">
+                                    <label for="floatingAge">Age</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input id="address" type="text" class="form-control" id="floatingAddress" name="adress" placeholder="No.1,...">
+                                    <label for="floatingAdress">Address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input id="phone" type="number" class="form-control" id="floatingPhone" name="phone" placeholder="09.........">
+                                    <label for="floatingPhone">Phone Number</label>
+                            </div>
+
+                            
+                            
+                            <!-- Additional fields for Student -->
+                            <div class="student-fields" style="display: none">
+                                <div class="form-floating mb-3">
+                                    
+                                    <select class="form-select form-control" id="currentEducation" name="currentEducation">
+                                        <option value="" disabled selected>Select Current Education</option>
+                                        <option value="High School">High School</option>
+                                        <option value="Middle School">Middle School</option>
+                                        <option value="Elementary School">Elementary School</option>
+                                        <option value="Undergraduate">Undergraduate</option>
+                                        <option value="Postgraduate">Postgraduate</option>
+                                    </select>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    
+                                    <input type="text" class="form-control" id="interestedSubjects" name="interestedSubjects" placeholder="Enter interested subjects">
+                                    <label for="interestedSubjects">Interested Subjects</label>
+                                </div>
+                            </div>
+
+                            <!-- Additional fields for Teacher -->
+                            <div class="teacher-fields" style="display: none">
+                                <div class="form-floating mb-3">
+                                    <select class="form-select form-control" id="currentEducationTeacher" name="currentEducationTeacher">
+                                        <option value="" disabled selected>Select Current Education</option>
+                                        <option value="Undergraduate">Undergraduate</option>
+                                        <option value="Postgraduate">Postgraduate</option>
+                                    </select>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="experience">Experience (Optional)</label>
+                                    <input type="text" class="form-control" id="experience" name="experience" placeholder="Enter experience">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="availableTime">Available Time</label>
+                                    <input type="text" class="form-control" id="availableTime" name="availableTime" placeholder="Enter available time">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="teachingSubjects">Teaching Subjects</label>
+                                    <input type="text" class="form-control" id="teachingSubjects" name="teachingSubjects" placeholder="Enter teaching subjects">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="feePerHour">Fee per hour</label>
+                                    <input type="text" class="form-control" id="feePerHour" name="feePerHour" placeholder="Enter fee per hour">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="biography">Biography/Quote (Optional)</label>
+                                    <input type="text" class="form-control" id="biography" name="biography" placeholder="Enter biography/quote">
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                                    <label class="form-check-label" for="acceptTerms">Accept Terms & Conditions</label>
+                                </div>
+                            </div>
+
+
+                            <!-- Next button -->
+                            <button class="btn-decoration btn rounded-2 w-100 py-2" id="nextButton" type="button">Next</button>
+                            <button class="btn-decoration btn rounded-2 w-100 py-2" id="signUpButton" style="display: none;">Sign Up</button>
+    
+                            <p>Already register? <a href="/login" class="royal-blue">Login</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+{% endblock %}

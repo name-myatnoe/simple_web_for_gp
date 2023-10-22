@@ -1,0 +1,33 @@
+body {
+    background: radial-gradient(circle,rgb(59, 145, 176),white);
+    backdrop-filter: blur(30px);
+  }
+
+.form-decoration{
+    color:#002366;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(8, 7, 16, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.167);
+ }
+ .btn-decoration{
+  color:#002366;
+  border:2px solid #002366;
+ }
+.form-control{
+  background-color: rgba(255, 255, 255, 0.112); 
+  backdrop-filter: blur(15px);
+  border:1px solid rgba(255, 255, 255, 0.1);
+  color: #002366; 
+}
+.text-decoration-underline{
+  color:#002366;
+}
+.royal-blue{
+  color:#002366;
+}
+
+.required::before {
+  content: " * ";
+  color: red;
+}
